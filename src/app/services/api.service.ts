@@ -9,17 +9,21 @@ import { take, tap } from 'rxjs/operators'
 })
 export class ApiService {
 
-  // link da api
-  readonly apiURL : string = 'https://swapi.dev/api/people/1';
 
+  // link da api
+  apiURL : string = 'https://swapi.dev/api/people/1';
   peoples: People[];
+  newApiUrl: string = 'https://swapi.dev/api/people'
+
+
+  // id = this.apiURL.slice(29, 30); // 1
+  // newApiUrl = this.apiURL.slice(0, 29); //ttps://swapi.dev/api/people/
+  // numberId: number =+ this.id;
 
   constructor(private http : HttpClient) {}
 
-  listOne(){
-    return this.http.get<People>(this.apiURL).pipe(
-      tap(console.log)
-    );
+  getPeople(numberId: number){
+    return this.http.get<People>(`${this.newApiUrl}/${numberId}`);
   }
 
 

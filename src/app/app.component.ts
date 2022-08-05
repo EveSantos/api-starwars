@@ -10,15 +10,31 @@ import { ApiService } from './services/api.service';
 export class AppComponent {
   title = 'skywalker';
 
-  people: People;
+  people: string;
+  id: number = 1;
 
   constructor(
     private service: ApiService
   ) { }
 
   ngOnInit() {
-    this.service.listOne().subscribe(data => {
+    this.service.getPeople(this.id).subscribe(data => {
       this.people = data.name;
     });
   }
+
+  next(){
+    this.id = this.id+1;
+    this.service.getPeople(this.id).subscribe(data => {
+      this.people = data.name;
+    });
+  }
+
+  previous(){
+    this.id = this.id-1;
+    this.service.getPeople(this.id).subscribe(data => {
+      this.people = data.name;
+    });
+  }
+
 }
