@@ -9,16 +9,10 @@ import { take, tap } from 'rxjs/operators'
 })
 export class ApiService {
 
-
-  // link da api
   apiURL : string = 'https://swapi.dev/api/people/1';
   peoples: People[];
   newApiUrl: string = 'https://swapi.dev/api/people'
 
-
-  // id = this.apiURL.slice(29, 30); // 1
-  // newApiUrl = this.apiURL.slice(0, 29); //ttps://swapi.dev/api/people/
-  // numberId: number =+ this.id;
 
   constructor(private http : HttpClient) {}
 
@@ -26,5 +20,16 @@ export class ApiService {
     return this.http.get<People>(`${this.newApiUrl}/${numberId}`);
   }
 
+  getAll(){
+    return this.http.get<any>(`${this.newApiUrl}`);
+  }
+
+  getNext(next: string){
+    return this.http.get<any>(`${next}`);
+  }
+
+  getPrevious(previous: string){
+    return this.http.get(`${previous}`)
+  }
 
 }

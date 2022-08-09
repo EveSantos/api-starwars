@@ -1,0 +1,23 @@
+<div class="table">
+  <table class="table">
+    <thead>
+      <tr>
+        <th >Nome</th>
+        <th >Gênero</th>
+        <th >Altura</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let people of peoples">
+        <td>{{people.name}}</td>
+        <td>{{ people.gender}}</td>
+        <td>{{ people.height}}</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="buttons">
+    <button [disabled]="previous==null?true:false" class="btn-prv" (click)="previousPage()" >Previous</button>
+    <button [disabled]="next==null?true:false" class="btn-ntx" (click)="nextPage()" >Next</button>
+  </div>
+</div>
