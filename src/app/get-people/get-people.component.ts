@@ -13,10 +13,7 @@ export class GetPeopleComponent implements OnInit {
   id: number;
   people: string;
 
-  constructor(private route: ActivatedRoute, private service: ApiService) {
-    console.log(this.route)
-    this.id = this.route.snapshot.params['id'];
-  }
+  constructor(private route: ActivatedRoute, private service: ApiService) { }
 
   ngOnInit(): void {
     this.route.params.subscribe((params: any)=>{
