@@ -7,6 +7,8 @@ import { PeopleComponent } from './people/people.component';
 import { GetPeopleComponent } from './get-people/get-people.component';
 import { NavbarModule } from "./navbar/navbar.component.module";
 import { HomePageComponent } from './home-page/home-page.component';
+import { FooterComponent } from './footer/footer.component';
+import { FooterModule } from "./footer/footer.component.module";
 
 @NgModule({
   declarations: [
@@ -20,6 +22,7 @@ import { HomePageComponent } from './home-page/home-page.component';
     AppRoutingModule,
     HttpClientModule,
     NavbarModule,
+    FooterModule
   ],
   providers: [],
   bootstrap: [AppComponent]
