@@ -5,6 +5,7 @@ import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
 import { PeopleComponent } from './people/people.component';
 import { GetPeopleComponent } from './get-people/get-people.component';
+import { NavbarModule } from "./navbar/navbar.component.module";
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { GetPeopleComponent } from './get-people/get-people.component';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    NavbarModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
