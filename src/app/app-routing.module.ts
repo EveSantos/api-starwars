@@ -8,8 +8,6 @@ const routes: Routes = [
   { path: 'people/:id', component: GetPeopleComponent}
 ];
 
-export const routing: ModuleWithProviders<any> = RouterModule.forRoot(routes);
-
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
