@@ -1,19 +1,6 @@
-
-
-/* .table-class{
-  width: 50%;
-  text-align: justify;
-  margin: 0 auto
-} */
-
 .buttons{
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin: 0 auto
-}
-
-.btn{
-  /* display: flex; */
-  /* text-align: center; */
 }
