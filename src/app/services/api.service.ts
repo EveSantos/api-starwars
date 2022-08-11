@@ -9,7 +9,7 @@ import { take, tap } from 'rxjs/operators'
 })
 export class ApiService {
 
-  apiURL : string = 'https://swapi.dev/api/people/1';
+  apiURL : string = 'https://swapi.dev/api';
   peoples: People[];
   newApiUrl: string = 'https://swapi.dev/api/people'
 

@@ -9,6 +9,7 @@ import { NavbarModule } from "./navbar/navbar.component.module";
 import { HomePageComponent } from './home-page/home-page.component';
 import { FooterComponent } from './footer/footer.component';
 import { FooterModule } from "./footer/footer.component.module";
+import { MovieCardComponent } from './movie-card/movie-card.component';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { FooterModule } from "./footer/footer.component.module";
     PeopleComponent,
     GetPeopleComponent,
     HomePageComponent,
+    MovieCardComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,27 @@
+<div class="container-cards">
+
+  <div class="gradient">
+    <div class="film-tag">
+      <div class="divisor"></div>
+      <h1>Filmes da franquia</h1>
+      <div class="divisor"></div>
+    </div>
+  </div>
+
+  <div class="card-background">
+    <div class="row p-4">
+      <div class="col-sm-4 home-cards" *ngFor="let film of films">
+        <div class="card text-center">
+          <img src="../../assets/img/star-wars.svg" class="card-img-top" >
+          <div class="card-body">
+            <h4 class="card-title">{{film.title}}</h4>
+            <h6 class="card-subtitle mb-2 text-muted">Episódio: {{film.episode_id}}</h6>
+            <p class="card-text">{{film.opening_crawl}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="gradient-bottom"></div>
+</div>
