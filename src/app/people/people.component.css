@@ -1,3 +1,7 @@
+.container{
+  padding-top: 3%;
+}
+
 .buttons{
   display: flex;
   align-items: center;

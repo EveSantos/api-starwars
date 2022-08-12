@@ -1,5 +1,5 @@
 <app-navbar></app-navbar>
-<div class="mt-3 container">
+<div class="mt-5 container">
   <h2>Pessoas</h2>
   <table class="table mt-4 table-bordered">
     <thead>
@@ -8,22 +8,26 @@
         <th>Gênero</th>
         <th>Altura</th>
         <th>Ações</th>
+        <th>interavel</th>
+
       </tr>
     </thead>
     <tbody class="">
 
-      <tr *ngFor="let people of peoples">
+      <tr *ngFor="let people of peoples; index as i">
         <td>{{people.name}}</td>
         <td>{{ people.gender}}</td>
         <td>{{ people.height}}</td>
         <td>
-          <a class="btn btn-info"><i class="fa-solid fa-eye"></i></a>
+          <a class="btn btn-primary" href="http://localhost:4200/people/{{peoplesId[i]}}"><i class="fa-solid fa-eye"></i></a>
         </td>
+        <td>{{peoplesId[i]}}</td>
       </tr>
     </tbody>
   </table>
   <div class="buttons">
-    <button [disabled]="previous==null?true:false" class="btn-prv btn btn-info" (click)="previousPage()" >Previous</button>
-    <button [disabled]="next==null?true:false" class="btn-ntx btn btn-info" (click)="nextPage()" >Next</button>
+    <button [disabled]="previous==null?true:false" class="btn-prv btn btn-primary" (click)="previousPage()" >Previous</button>
+    <button [disabled]="next==null?true:false" class="btn-ntx btn btn-primary" (click)="nextPage()" >Next</button>
   </div>
 </div>
+<app-footer></app-footer>

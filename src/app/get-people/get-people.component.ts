@@ -11,7 +11,7 @@ import { ApiService } from '../services/api.service';
 export class GetPeopleComponent implements OnInit {
 
   id: number;
-  people: string;
+  people: People;
 
   constructor(private route: ActivatedRoute, private service: ApiService) { }
 
@@ -19,7 +19,7 @@ export class GetPeopleComponent implements OnInit {
     this.route.params.subscribe((params: any)=>{
       this.id = params['id'];
       this.service.getPeople(this.id).subscribe(data => {
-        this.people = data.name
+        this.people = data
       })
     });
   }

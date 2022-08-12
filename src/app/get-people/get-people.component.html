@@ -1,3 +1,20 @@
-<div class="pessoa">
-  <p>{{people}}</p>
-</div>
+<app-navbar></app-navbar>
+<div class="page">
+  <div class="content">
+    <div class="mt-5 ">
+      <h2>{{people.name}}</h2>
+    </div>
+    <ul class="list-group">
+      <li class="list-group-item active" aria-current="true">Informações Pessoais</li>
+      <li class="list-group-item"> Altura: {{ people.height}}</li>
+      <li class="list-group-item">Peso: {{ people.mass}}</li>
+      <li class="list-group-item">Cor Cabelo: {{people.hair_color}}</li>
+      <li class="list-group-item">Cor Pele: {{ people.skin_color}}</li>
+      <li class="list-group-item">Cor Olhos: {{ people.eye_color}}</li>
+      <li class="list-group-item">Ano Nascimento: {{ people.birth_year}}</li>
+      <li class="list-group-item">Gênero: {{people.gender}}</li>
+    </ul>
+    </div>
+  </div>
+  <app-footer></app-footer>
+
