@@ -10,6 +10,7 @@ import { HomePageComponent } from './home-page/home-page.component';
 import { FooterComponent } from './footer/footer.component';
 import { FooterModule } from "./footer/footer.component.module";
 import { MovieCardComponent } from './movie-card/movie-card.component';
+import { SecundaryContentComponent } from './secundary-content/secundary-content.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { MovieCardComponent } from './movie-card/movie-card.component';
     GetPeopleComponent,
     HomePageComponent,
     MovieCardComponent,
+    SecundaryContentComponent,
   ],
   imports: [
     BrowserModule,

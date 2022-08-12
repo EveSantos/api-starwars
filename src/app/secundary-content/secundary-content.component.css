@@ -1,0 +1,126 @@
+.secondary-content {
+  margin: 10% 0 10% 0;
+}
+
+.text-content {
+  background-color: rgb(73, 73, 73);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: justify;
+}
+
+h1{
+  margin: 0 0 0 10%;
+}
+
+.luke-vader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.luke-skywalker {
+  width: 40%;
+  border-radius: 5%;
+}
+
+.darth-vader {
+  width: 40%;
+  border-radius: 5%;
+
+}
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+p {
+  color: white;
+  font-size: 15px;
+  padding: 5%;
+  margin: 0;
+}
+
+.divisor-title {
+  width: 70%;
+  padding: 4px;
+  background-color: rgb(202, 35, 35);
+  margin-bottom: 5%;
+}
+
+.divisor {
+  width: 70%;
+  padding: 2px;
+  align-items: center;
+  background-color: rgb(245, 245, 128);
+}
+
+.divisor-end {
+  margin-top: 5%;
+  width: 70%;
+  padding: 4px;
+  background-color: rgb(59, 53, 244);
+}
+
+
+/* Imagens */
+
+.scale-up-center {
+	-webkit-animation: scale-up-center 0.8s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+	        animation: scale-up-center 0.8s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+          animation-iteration-count: infinite;
+          animation-direction: alternate;
+}
+
+@-webkit-keyframes scale-up-center {
+  0% {
+    -webkit-transform: scale(0.9);
+            transform: scale(0.9);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+@keyframes scale-up-center {
+  0% {
+    -webkit-transform: scale(0.9);
+            transform: scale(0.9);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+/* Divisor */
+.scale-up-hor-center {
+	-webkit-animation: scale-up-hor-center 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+	        animation: scale-up-hor-center 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+          animation-iteration-count: infinite;
+          animation-direction: alternate;
+}
+
+ @-webkit-keyframes scale-up-hor-center {
+  0% {
+    -webkit-transform: scaleX(0.2);
+            transform: scaleX(0.2);
+  }
+  100% {
+    -webkit-transform: scaleX(0.8);
+            transform: scaleX(0.8);
+  }
+}
+@keyframes scale-up-hor-center {
+  0% {
+    -webkit-transform: scaleX(0.2);
+            transform: scaleX(0.2);
+  }
+  100% {
+    -webkit-transform: scaleX(0.8);
+            transform: scaleX(0.8);
+  }
+}
