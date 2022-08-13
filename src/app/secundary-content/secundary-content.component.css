@@ -3,14 +3,15 @@
 }
 
 .text-content {
-  background-color: rgb(73, 73, 73);
+  background-color: rgb(78, 78, 78);
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: justify;
+  box-shadow: 0 0 3em rgb(78, 78, 78);
 }
 
-h1{
+h1 {
   margin: 0 0 0 10%;
 }
 
@@ -21,32 +22,40 @@ h1{
 }
 
 .luke-skywalker {
-  width: 40%;
+  width: 50%;
   border-radius: 5%;
 }
 
 .darth-vader {
-  width: 40%;
+  width: 50%;
   border-radius: 5%;
 
 }
 
-.buttons {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
+.btn-luke {
+  margin-bottom: 30%;
+}
+
+.btn-vader {
+  margin-top: 50%;
 }
 
 p {
-  color: white;
+  color: rgb(255, 255, 255);
   font-size: 15px;
   padding: 5%;
   margin: 0;
 }
 
+h4 {
+  color: rgb(255, 255, 255);
+  font-size: 25px;
+  margin: 3% 0 0 0;
+}
+
 .divisor-title {
   width: 70%;
-  padding: 4px;
+  padding: 10px;
   background-color: rgb(202, 35, 35);
   margin-bottom: 5%;
 }
@@ -55,72 +64,86 @@ p {
   width: 70%;
   padding: 2px;
   align-items: center;
-  background-color: rgb(245, 245, 128);
+  background-color: rgb(255, 255, 255);
 }
 
 .divisor-end {
   margin-top: 5%;
-  width: 70%;
-  padding: 4px;
+  width: 65%;
+  padding: 10px;
+  margin-bottom: 10%;
   background-color: rgb(59, 53, 244);
 }
 
+.divisor-end-two {
+  margin-top: 5%;
+  margin-bottom: 10%;
+  width: 15%;
+  padding: 10px;
+  background-color: rgb(59, 53, 244);
+}
 
 /* Imagens */
 
 .scale-up-center {
-	-webkit-animation: scale-up-center 0.8s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
-	        animation: scale-up-center 0.8s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
-          animation-iteration-count: infinite;
-          animation-direction: alternate;
+  -webkit-animation: scale-up-center 0.8s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+  animation: scale-up-center 0.8s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
 }
 
 @-webkit-keyframes scale-up-center {
   0% {
     -webkit-transform: scale(0.9);
-            transform: scale(0.9);
+    transform: scale(0.9);
   }
+
   100% {
     -webkit-transform: scale(1);
-            transform: scale(1);
+    transform: scale(1);
   }
 }
+
 @keyframes scale-up-center {
   0% {
     -webkit-transform: scale(0.9);
-            transform: scale(0.9);
+    transform: scale(0.9);
   }
+
   100% {
     -webkit-transform: scale(1);
-            transform: scale(1);
+    transform: scale(1);
   }
 }
 
 /* Divisor */
 .scale-up-hor-center {
-	-webkit-animation: scale-up-hor-center 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
-	        animation: scale-up-hor-center 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
-          animation-iteration-count: infinite;
-          animation-direction: alternate;
+  -webkit-animation: scale-up-hor-center 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+  animation: scale-up-hor-center 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
 }
 
- @-webkit-keyframes scale-up-hor-center {
+@-webkit-keyframes scale-up-hor-center {
   0% {
     -webkit-transform: scaleX(0.2);
-            transform: scaleX(0.2);
+    transform: scaleX(0.2);
   }
+
   100% {
     -webkit-transform: scaleX(0.8);
-            transform: scaleX(0.8);
+    transform: scaleX(0.8);
   }
 }
+
 @keyframes scale-up-hor-center {
   0% {
     -webkit-transform: scaleX(0.2);
-            transform: scaleX(0.2);
+    transform: scaleX(0.2);
   }
+
   100% {
     -webkit-transform: scaleX(0.8);
-            transform: scaleX(0.8);
+    transform: scaleX(0.8);
   }
 }
