@@ -1,27 +1,38 @@
-<div class="container-cards">
 
-  <div class="gradient">
+  <app-navbar></app-navbar>
+<div class="card-background  px-4 text-center">
+  <div class="container-title">
     <div class="film-tag">
-      <div class="divisor"></div>
       <h1>Filmes da franquia</h1>
-      <div class="divisor"></div>
     </div>
   </div>
-
-  <div class="card-background">
-    <div class="row p-4">
-      <div class="col-sm-4 home-cards" *ngFor="let film of films">
-        <div class="card text-center">
-          <img src="../../assets/img/star-wars.svg" class="card-img-top" >
-          <div class="card-body">
-            <h4 class="card-title">{{film.title}}</h4>
-            <h6 class="card-subtitle mb-2 text-muted">Episódio: {{film.episode_id}}</h6>
-            <p class="card-text">{{film.opening_crawl}}</p>
+  <div class="row p-4">
+    <div class="col-sm-2 home-cards" style="width: 30rem;" *ngFor="let film of films, index as i">
+      <div class="card text-center">
+        <img style="height: 100%;" src="../../assets/img/{{img[i]}}" class="card-img-top">
+        <div class="card-body">
+          <h4 class="card-title">{{film.title}}</h4>
+          <h6 class="card-subtitle mb-2 text-muted">Episódio: {{film.episode_id}}</h6>
+          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            Abertura
+          </button>
+          <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel"> {{film.title}}</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  {{film.opening_crawl}}
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </div>
-
-  <div class="gradient-bottom"></div>
 </div>
+<app-footer></app-footer>
