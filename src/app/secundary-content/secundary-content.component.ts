@@ -7,9 +7,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SecundaryContentComponent implements OnInit {
 
+  luke: boolean =  true;
+  vader: boolean = false;
+
   constructor() { }
 
   ngOnInit(): void {
   }
 
+  isShowVader(){
+    this.luke = false;
+    this.vader = true
+  }
+
+  isShowLuke(){
+    this.luke = true;
+    this.vader = false
+  }
 }

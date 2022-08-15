@@ -32,12 +32,8 @@ h1 {
 
 }
 
-.btn-luke {
-  margin-bottom: 30%;
-}
-
 .btn-vader {
-  margin-top: 50%;
+  margin-top: 100%;
 }
 
 p {
@@ -46,18 +42,22 @@ p {
   padding: 5%;
   margin: 0;
 }
-
+text-carac:hover{
+  width:80%
+}
 h4 {
+  display: flex;
+  justify-content: center;
   color: rgb(255, 255, 255);
   font-size: 25px;
-  margin: 3% 0 0 0;
+  margin-top: 3%;
 }
 
 .divisor-title {
   width: 70%;
   padding: 10px;
   background-color: rgb(202, 35, 35);
-  margin-bottom: 5%;
+  margin-bottom: 2%;
 }
 
 .divisor {
@@ -68,7 +68,7 @@ h4 {
 }
 
 .divisor-end {
-  margin-top: 5%;
+  margin-top: 2%;
   width: 65%;
   padding: 10px;
   margin-bottom: 10%;
@@ -76,9 +76,9 @@ h4 {
 }
 
 .divisor-end-two {
-  margin-top: 5%;
+  margin-top: 2%;
   margin-bottom: 10%;
-  width: 15%;
+  width: 10%;
   padding: 10px;
   background-color: rgb(59, 53, 244);
 }
