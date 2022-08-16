@@ -32,4 +32,8 @@ export class ApiService {
     return this.http.get(`${previous}`)
   }
 
+  getSearch(nome: string){
+    return this.http.get(`${this.newApiUrl}/?search=${nome}`);
+  }
+
 }

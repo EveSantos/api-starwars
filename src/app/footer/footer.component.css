@@ -34,7 +34,6 @@ a{
 
 .change-color:hover{
   background-color: rgb(223, 223, 223);
-  border-radius: 15%;
   transition: 1s;
 }
 

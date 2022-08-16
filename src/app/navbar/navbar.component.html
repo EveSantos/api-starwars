@@ -3,6 +3,10 @@
     <button class="navbar-toggler " type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
       <span class="navbar-toggler-icon"></span>
     </button>
+    <form class="d-flex" [formGroup]="searchform" role="search">
+      <input name="search" formControlName="search" class="form-control me-2" type="search" placeholder="Pesquisar" aria-label="Search">
+      <button (click)="search()" class="btn btn-outline-success"data-bs-toggle="modal" data-bs-target="#exampleModal" type="submit">Pesquisar</button>
+    </form>
     <div class="offcanvas offcanvas-start text-bg-dark" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
       <div class="offcanvas-header">
         <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menu</h5>
@@ -24,3 +28,18 @@
     </div>
   </div>
 </nav>
+<div class="modal fade search-modal" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-xl">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Resultados da pesquisa</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body d-flex row ">
+        <div class="col-6 d-flex justify-content-center card-people" *ngFor="let people of peoples, index as i">
+          <app-search-people [data]="people"></app-search-people>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

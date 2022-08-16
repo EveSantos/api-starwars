@@ -11,6 +11,8 @@ import { FooterComponent } from './footer/footer.component';
 import { FooterModule } from "./footer/footer.component.module";
 import { MovieCardComponent } from './movie-card/movie-card.component';
 import { SecundaryContentComponent } from './secundary-content/secundary-content.component';
+import { ChronologyComponent } from './chronology/chronology.component';
+import { SearchModule } from "./search/search.module";
 
 @NgModule({
   declarations: [
@@ -20,13 +22,15 @@ import { SecundaryContentComponent } from './secundary-content/secundary-content
     HomePageComponent,
     MovieCardComponent,
     SecundaryContentComponent,
+    ChronologyComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     NavbarModule,
-    FooterModule
+    FooterModule,
+    SearchModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,0 +1,42 @@
+.chronology{
+  margin-bottom: 5%;
+}
+
+h1{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 5%;
+}
+
+.btn{
+  margin: 0 5%;
+  background-color: rgb(245, 187, 40);
+}
+
+img{
+  width: 8rem;
+  height: 8rem;
+}
+
+.card-chron{
+  display: flex;
+  align-items: center;
+}
+
+p{
+  display: flex;
+  justify-content: center;
+  text-align: justify;
+  background-color: rgb(245, 187, 40);
+  padding: 1rem;
+}
+
+.text-film{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+
+
+

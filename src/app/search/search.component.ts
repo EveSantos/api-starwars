@@ -4,13 +4,13 @@ import { People } from '../models/people.model';
 import { ApiService } from '../services/api.service';
 
 @Component({
-  selector: 'app-navbar',
-  templateUrl: './navbar.component.html',
-  styleUrls: ['./navbar.component.css']
+  selector: 'app-search',
+  templateUrl: './search.component.html',
+  styleUrls: ['./search.component.css']
 })
-export class NavbarComponent implements OnInit {
+export class SearchComponent implements OnInit {
 
-  peoples: People[];
+  nome: People[];
   searchform: FormGroup;
   constructor(private formbuilder: FormBuilder,
     private service: ApiService
@@ -24,10 +24,9 @@ export class NavbarComponent implements OnInit {
 
   search(){
     this.service.getSearch(this.searchform.get('search')?.value).subscribe((data: any) => {
-      this.peoples = data.results;
+      this.nome = data.results;
       console.log(data.results);
     })
   }
-
 
 }
