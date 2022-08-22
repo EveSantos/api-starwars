@@ -28,7 +28,6 @@ import { SearchModule } from "./search/search.module";
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    NavbarModule,
     FooterModule,
     SearchModule
   ],

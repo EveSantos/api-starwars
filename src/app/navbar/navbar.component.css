@@ -1,3 +1,19 @@
 .card-people{
   margin-bottom: 1rem;
 }
+
+.modal{
+  position: absolute;
+  z-index: 20000 !important;
+}
+
+.form-select{
+  width: 45%;
+}
+
+.buttons{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 auto
+}

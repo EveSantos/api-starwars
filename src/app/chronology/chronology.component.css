@@ -13,6 +13,18 @@ h1{
   background-color: rgb(245, 187, 40);
 }
 
+.btn,btn-warning:hover{
+  cursor: default;
+}
+
+.size-dif{
+  padding: 6px 14px;
+}
+
+.size-dif-1{
+  padding: 6px 16px;
+}
+
 img{
   width: 8rem;
   height: 8rem;

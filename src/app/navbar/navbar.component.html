@@ -4,9 +4,18 @@
       <span class="navbar-toggler-icon"></span>
     </button>
     <form class="d-flex" [formGroup]="searchform" role="search">
+      <select #options (change)="onSelected(options.value)"  class="form-select form-select-sm" >
+        <!-- <option value="state">Todos</option> -->
+        <option value="people" [selected]="true">Pessoas</option>
+        <option value="planets">Planetas</option>
+        <option value="starships">Naves</option>
+        <option value="species">Espécies</option>
+        <option value="vehicles">Veículos</option>
+      </select>
       <input name="search" formControlName="search" class="form-control me-2" type="search" placeholder="Pesquisar" aria-label="Search">
       <button (click)="search()" class="btn btn-outline-success"data-bs-toggle="modal" data-bs-target="#exampleModal" type="submit">Pesquisar</button>
     </form>
+    <!-- Menu lateral -->
     <div class="offcanvas offcanvas-start text-bg-dark" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
       <div class="offcanvas-header">
         <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menu</h5>
@@ -28,6 +37,8 @@
     </div>
   </div>
 </nav>
+
+<!-- Modal -->
 <div class="modal fade search-modal" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-xl">
     <div class="modal-content">
@@ -36,9 +47,13 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body d-flex row ">
-        <div class="col-6 d-flex justify-content-center card-people" *ngFor="let people of peoples, index as i">
-          <app-search-people [data]="people"></app-search-people>
+        <div class="col-6 d-flex justify-content-center card-people" *ngFor="let dataSearch of datasSearch, index as i">
+          <app-search [dataId]="dataId[i]" [dataSearch]="dataSearch"></app-search>
         </div>
+      </div>
+      <div class="buttons">
+        <button [disabled]="previous==null?true:false" class="btn-prv btn btn-primary" (click)="previousPage()" >Previous</button>
+        <button [disabled]="next==null?true:false" class="btn-ntx btn btn-primary" (click)="nextPage()" >Next</button>
       </div>
     </div>
   </div>

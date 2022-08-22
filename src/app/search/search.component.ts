@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { People } from '../models/people.model';
 import { ApiService } from '../services/api.service';
@@ -10,23 +10,13 @@ import { ApiService } from '../services/api.service';
 })
 export class SearchComponent implements OnInit {
 
-  nome: People[];
-  searchform: FormGroup;
-  constructor(private formbuilder: FormBuilder,
-    private service: ApiService
-    ) { }
+  @Input() dataSearch: any;
+  @Input() dataId: number;
+
+
+  constructor() { }
 
   ngOnInit(): void {
-    this.searchform = this.formbuilder.group({
-      search:['']
-    })
-  }
-
-  search(){
-    this.service.getSearch(this.searchform.get('search')?.value).subscribe((data: any) => {
-      this.nome = data.results;
-      console.log(data.results);
-    })
   }
 
 }
