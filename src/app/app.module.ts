@@ -29,7 +29,8 @@ import { SearchModule } from "./search/search.module";
     AppRoutingModule,
     HttpClientModule,
     FooterModule,
-    SearchModule
+    SearchModule,
+    NavbarModule
   ],
   providers: [],
   bootstrap: [AppComponent]
